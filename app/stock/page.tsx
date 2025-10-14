@@ -50,9 +50,11 @@ export default function StockPage() {
   const [data, setData] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [timestamp, setTimestamp] = useState<string | null>(null);
+  const [hasFetched, setHasFetched] = useState(false);
 
   const handleClick = () => {
     setLoading(true);
+    setHasFetched(true);
     setData(null); // 清除舊資料（避免殘留）
     fetch(`${API_BASE}/api/stock`)
       .then((res) => res.json())
@@ -227,7 +229,7 @@ export default function StockPage() {
           </section>
         </>
       ) : (
-        !loading && (
+        hasFetched && !loading && (
           <p className="text-sm text-yellow-600">⚠️ 沒有可顯示的新聞資料</p>
         )
       )}
