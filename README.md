@@ -53,27 +53,6 @@ http://127.0.0.1:5000
 
 前端透過 `?ticker=2317.TW` 等 URL 參數切換至個股報告模式。
 
-## Getting Started
-
-1. 安裝 Node.js 與 npm。
-2. 下載專案並安裝套件：
-
-```bash
-git clone https://github.com/pollykao2/ragenius_react.git
-cd ragenius_react
-npm install
-```
-
-3. 啟動後端，確認 API 位址與頁面程式中的 API_BASE 一致。
-   後端需允許前端來源的跨來源請求（CORS）。
-4. 啟動前端：
-
-```bash
-npm run dev
-```
-
-5. 開啟 http://localhost:3000；若功能頁放在其他路由，請開啟對應路徑。
-
 ## Current Limitations
 
 - 需搭配後端服務，才能取得市場資料與 AI 分析結果。
